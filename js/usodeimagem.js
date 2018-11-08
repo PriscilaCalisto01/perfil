@@ -66,7 +66,7 @@ function obtemNomeEmpresa() {
             console.log("Erro");
             console.error(err);
         } else {
-            console.log("Resultado");
+            console.log("Protocolo");
             let objStatus = document.getElementById("spanNomeEmpresa");
             console.log(resultado);
             objStatus.innerText = resultado;
