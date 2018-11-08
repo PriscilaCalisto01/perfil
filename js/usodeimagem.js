@@ -91,23 +91,9 @@ function registrarNomeEmpresa() {
     });
 }
 
-function obtemNomeAgente() {
-    contratoUsoDeImagem.nomeEmpresa({from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
-        if (err)    {
-            console.log("Erro");
-            console.error(err);
-        } else {
-            console.log("Resultado");
-            let objStatus = document.getElementById("spanNomeEmpresa");
-            console.log(resultado);
-            objStatus.innerText = resultado;
-        }
-    });
-}
-
-function registrarNomeAgente() {
+function definirAgente() {
 	var statusTransacao = document.getElementById("statusTransacaoNomeAgente");
-	var nomeAgente = document.formNomeAgente.campoNomeAgente.value;
+	var definirAgente = document.formNomeAgente.campoNomeAgente.value;
 	statusTransacao.innerHTML = "Enviando transação. Por favor monitore seu Metamask.";
 	contratoUsoDeImagem.definirNomeDoAgente(nomeAgente, {from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
         if (err)    {
