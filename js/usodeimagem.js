@@ -74,6 +74,19 @@ function obtemNomeEmpresa() {
     });
 }
 
+function obtemNomeAgente() {
+    contratoUsoDeImagem.nomeAgente({from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
+        if (err)    {
+            console.log("Erro");
+            console.error(err);
+        } else {
+            console.log("Resultado");
+            let objStatus = document.getElementById("spanNomeEmpresa");
+            console.log(resultado);
+            objStatus.innerText = resultado;
+        }
+    });
+}
 function registrarNomeEmpresa() {
 	var statusTransacao = document.getElementById("statusTransacaoNomeEmpresa");
 	var nomeEmpresa = document.formNomeEmpresa.campoNomeEmpresa.value;
