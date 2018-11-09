@@ -93,7 +93,7 @@ function registrarNomeEmpresa() {
 
 function definirAgente() {
 	var statusTransacao = document.getElementById("statusTransacaoNomeEmpresa");
-	var qualAgente = document.formDefinirAgente.campoDefinirAgente.value;
+	var qualAgente = document.formNomeAgente.campoNomeAgente.value;
 	statusTransacao.innerHTML = "Enviando transação. Por favor monitore seu Metamask.";
 	contratoUsoDeImagem.definirAgente(qualAgente, {from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
         if (err)    {
